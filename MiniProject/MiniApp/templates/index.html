@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link   href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
+      crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+    .container{
+      margin-top: 5rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .card{
+      margin: auto;
+    }
+  </style>
+  <title>Mini App</title>
+</head>
+<body>
+ 
+    {% for file in file_list %}
+  
+          <p >{{file}}</p>
+    {% endfor %}
+    
+    {% for file in data_lines %}
+  
+          <p >{{file}}</p>
+    {% endfor %}
+  
+<a href="upload">Upload New </a> 
+<hr>    
+<a href="process">PROCESS </a> 
+<hr>
+<a href="media/MiniApp_Images/branch.xlsx" download >Download Excel File </a> 
+<hr>
+<a href="delete">Delete All Files </a> 
+<hr>
+<a href="/">HOME </a> 
+<hr>
+ <p>Developed By Sanjoy Kumar Sarker</p> 
+</body>
+</html>
